@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Frontend Developer Love Vue conference Amsterdam</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <p>Frontend Developer Love/Vue Conference Amsterdam
+    <p>
+      <p>15th &amp; 16to of February, 2018</p>
+      <ul>
+        <li>Day 1 Frontend Love</li>
+        <li>Day 2 Vue.js</li>
+      </ul>
+    </p>
+    <div id="app">
+      <ul id="example-1">
+        <li v-for="item in items">
+          {{item.number}} {{ item.speaker }}: {{item.title }}
+          <div v-show=item.material>
+            <a :href=item.material>slides</a>
+          </div>
+          <div v-show=item.code>|
+            <a :href=item.code>code</a>
+          </div>
+          <div v-show=item.demo>|
+            <a :href=item.demo>demo</a>
+          </div>
+          <div v-show=item.video>|
+            <a :href=item.video>video</a>
+          </div>
+          <div v-show=item.twitter>| Twitter: {{item.twitter}}
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          items: [
+            {
+              "speaker": "Sarah Drasner",
+              "title": "Animating Vue: How capable and elegant is Vue.js in terms of animation",
+              "summary": "Vue is uniquely capable and elegant in terms of animation. In this talk we explore all of the myriad hooks and features that can supercharge development for changes that happen over time, some of which have broader implications for all application development.",
+              "material": "http://slides.com/sdrasner/animating-vue-f17#/4",
+              "code": "",
+              "demo": "",
+              "video": "https://www.youtube.com/watch?v=LLnVLjpY6gE",
+              "twitter": "",
+              "number": "1.1"
+            },
+            {
+              "speaker": "Michel Weststrate",
+              "title": "React; it's not a framework for the UI, but a framework for the mind.",
+              "summary": "React is known as an awesome, solidly engineered UI library. But it is so much more than that. It is a repurposable set of abstractions that can not only be used to commandeer the DOM, but also powers native mobile apps, WebVR, audio devices and many things more. Come and join this talk to learn about the abstractions that make React great and how you could apply them to many other problem domains as well. React is not just a framework for the UI, it is a framework for the mind.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "video": "https://www.youtube.com/watch?v=clTP9hJWsrE",
+              "twitter": "",
+              "number": "1.2"
+            },
+            {
+              "speaker": "Simona Cotin",
+              "title": "Build progressive web apps with Angular.",
+              "summary": "Progressive web apps (PWA) are becoming an industry standard for building web applications. With reliability, speed and immersive user experience in mind, PWAs help you reach a broader audience. In this session we will take an existing web app and convert it into a PWA. First, we'll make our application installable to homescreen by adding a Web App Manifest json file. Next, we'll focus on making our app reliable by enabling service workers inside our application and caching resources. Throughout this session we'll also learn how to use Lighthouse to test the performance of our PWA.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "video": "https://www.youtube.com/watch?v=zsxeA8kJBbo",
+              "twitter": "",
+              "number": "1.3"
+            },
+            {
+              "speaker": "Luca Mezzalira",
+              "title": "MobX State Tree + React: pure reactivity served",
+              "summary": "Reactive Programming is definitely the paradigm for the future, MobX is a state management system very easy to pick up and in combination with MobX state tree we can create reactive applications in no time. In this talk I'd like to highlight the key concepts of Reactive Programming inside MobX like observables and observers, computed values and actions. Also I'm going to share a real example that will cover the key parts of a frontend application like: . consuming a remote endpoint . managing the data flow . structuring the relation between views and store. reacting to changes.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.4"
+            },
+            {
+              "speaker": "Alexandre & Sébastien Chopin",
+              "title": "Start using Vue.js like jQuery",
+              "summary": "We all know how easy it is to include jQuery in a website and make it reactive, do you know it's possible to use Vue.js like jQuery? It means, no webpack, no build, you only include a script at the end of you body and let the magic happens!",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.5"
+            },
+            {
+              "speaker": "Manfred Steyer",
+              "title": "Automating boring Programming Tasks with the Angular CLI and Schematics",
+              "summary": "For scaffolding files, the Angular CLI leverages the code generator Schematics. To customize its behavior, everyone can tweak the used templates and even create new ones. This session shows how to leverage this less known technology dozing under the CLI's covers. For this, you will learn how Schematics work and how we can write npm packages that provide additional code generators. You will also see how to modify existing source files, e. g. in order to register a generated component with an existing module. For this, we will use the TypeScript's compilers services which allow to directly manipulate the application's abstract syntax tree. After this session you know the build-in options for automating repetitive and boring programming tasks.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.6"
+            },
+            {
+              "speaker": "Kitze Ristovski",
+              "title": "The exciting future of React",
+              "summary": "Aside from the fact that the core of React was completely rewritten, version 16 also comes with some powerful new features. From error boundaries, to portals and fragments, there is a lot to learn. Additionally, we're gonna explore some experimental features like react-call-return and we're going to see what does the future hold for React.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.7"
+            },
+            {
+              "speaker": "Eduardo San Martin Morote",
+              "title": "Vue, simple yet scalable",
+              "summary": "Vue is known for being approachable and also for having good docs. However, it has also been said that it’s not well suited for big applications. While this is not true, some believed it wasn’t and as a consequence, discarded it as a possible choice for their next application even though they were enjoying very much developing applications with Vue. During this talk I will elaborate on what makes Vue simple to approach by exploring its mindset and its associated features. Then we will understand why it is called a progressive framework by learning how to progressively adopt official solutions like vue-router and vuex.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.8"
+            },
+            {
+              "speaker": "Gerard Sans",
+              "title": "Why nobody told me about ngrx/entity?",
+              "summary": "In this talk we are going to explore one of the latest additions to the ngrx suite. This is the ngrx/entity! We will use an existing ngrx Application to identify repetitive code and show how we can use ngrx/entity to keep our reducers clean and shiny!",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.9"
+            },
+            {
+              "speaker": "Prashant Palikhe",
+              "title": "New Chrome Dev Tool Functions that will blow your mind",
+              "summary": "Prashant will take you on a fast ride through recent DevTools developments that can help frontend devs immensely in their daily workflows.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.10"
+            },
+            {
+              "speaker": "Raisa Cuevas",
+              "title": "Augmented Reality: Past, Present, Future",
+              "summary": "Big brands across various industries are starting to realize the potential of augmented reality (AR) for innovation in marketing and in product. But with AR's history dating back to 1968, why has it suddenly become the next big thing? This talk will dive into the rich history of AR to help us understand and appreciate where the technology is now. You will learn some tools to build with AR today, and understand how the technology will open up creative possibilities for our future.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.11"
+            },
+            {
+              "speaker": "Norbert de Langen",
+              "title": "Building a component library with React, Vue, Angular or WebComponents",
+              "summary": "A summary of the living styleguide options available to you depending on your framework of choice, complete with demos. Secondly I'll show you Storybook as the a solution that works for all, and tell you how to build a version for own.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.12"
+            },
+            {
+              "speaker": "Tim van der Lippe",
+              "title": "When to use web components",
+              "summary": "Webcomponents have finally shipped in multiple browsers. In this presentation I will elaborate on the accepted standards, how to define and use webcomponents and explain the overall use-case. With several examples of webcomponents, libraries and implementations, a final answer can be formulated to the question of 'How (not) to use webcomponents?'",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.13"
+            },
+            {
+              "speaker": "Jen Looper",
+              "title": "Gouda, Edam, or Maasdammer: Comparing NativeScript, Ionic, and React Native for Mobile Apps",
+              "summary": "You’ve heard of comparing apples and oranges? Well, when comparing mobile app frameworks, you can often get lost amongst the great variety and delicious attractions offered by each. In this talk, I’ll walk you through the basics of building a simple app in NativeScript, Ionic, and React Native. You’ll learn the ins and outs of each platform’s layouts, styling and data fetching strategies, while learning more than you ever wanted to know about Dutch cheese. Curious? Join me and we’ll learn together!",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "1.14"
+            },
+            {
+              "speaker": "Evan You",
+              "title": "Keynote speech on the past, present and future of Vue.js",
+              "summary": "",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "video": "https://www.youtube.com/watch?v=TRJMT9yjONQ",
+              "twitter": "",
+              "number": "2.1"
+            },
+            {
+              "speaker": "Roman Kuba",
+              "title": "Scaling Vue in an existing stack",
+              "summary": "Greengrass projects are a luxury, one very often does not have. Most times there is an existing tech stack, and it's about time to introduce a new UI Library to the stack. Vue is an excellent choice. Introduce it small and start scaling from there. In this talk I will share experience, tricks and solutions to add Vue to an existing customer serving app, and be victorious.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.2"
+            },
+            {
+              "speaker": "Guillaume Chau",
+              "title": "Apollo, GraphQL and Vue: the ultimate stack",
+              "summary": "Nowadays, most apps use REST to communicate between dissociated front-end and back-end or even multiple back-ends! But ad-hoc and under-specified endpoints often lead to a mess that eats up energy and time from the developers. Open-sourced 3 years ago by Facebook, GraphQL is a new specification aiming to solve today's problems with a different approach, and a lot of companies start to notice GraphQL is very effective at that! It brings many benefits like strong typing and validation, a new query language, predictable and hierarchical results, self-describing schema, auto-documentation...",
+              "material": "",
+              "code": "https://github.com/Akryum/vue-amsterdam-2018",
+              "video": "https://www.youtube.com/watch?v=nq5q_gOOimA",
+              "demo": "",
+              "twitter": "@Akryum",
+              "number": "2.3"
+            },
+            {
+              "speaker": "Alexandre Chopin",
+              "title": "Speed up your Vue.js development time with Nuxt.js",
+              "summary": "Making a Vue.js Application required often dependencies configurations like vue-router, vuex or a node.js server if you want to server render it. We will see how Nuxt.js help you to save you development time with its core functionalities and community modules.",
+              "material": "",
+              "code": "",
+              "video": "https://www.youtube.com/watch?v=4wQpuJo6RzM",
+              "demo": "",
+              "twitter": "",
+              "number": "2.4"
+            },
+            {
+              "speaker": "Eduardo San Martin Morote",
+              "title": "State animations: Getting them right",
+              "summary": "Aah, animations. Moving things on the screen will either fascinate your users or make them close your app right away. Add no animations and your users will feel sometimes lost. Add too much and they will be disgusted. But, to make it harder, animations by themselves have to be configured just right to have a meaning. Speed, duration and the object being animated have to be set just right. Now, Vue already provides us with two nice components: transition and transition-group that are based on CSS animations. But what about the state? Numerical values that change and you want to animate. During my talk, I will explain what state transitions are, how they differ from CSS transitions, what are they used for and show some practical implementations. We will cover good and bad practices while we delight ourselves with some demos.",
+              "material": "http://slides.com/posva/vue-simple-yet-scalable#/",
+              "code": "https://github.com/posva/state-animation-demos",
+              "demo": "https://state-animations-amsterdam.surge.sh/",
+              "video":"https://www.youtube.com/watch?v=XmouoW1Gfro",
+              "twitter": "",
+              "number": "2.5"
+            },
+            {
+              "speaker": "Plamen Zdravkov",
+              "title": "Building reusable UI components in Vue. What have we learned from building them for KendoUI",
+              "summary": "Reusable UI components can be built in different ways and almost every web developer sooner or later faces this challenge. In Kendo UI we have created many of them in different frameworks and every framework provides its own specifics and variations for this process. Lets dive together into some details how such component can be designed and created in Vue. I will share some thoughts how to approach this challenge, show some hidden problems that could be met and best practices for solving them in a concrete real world scenario.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.6"
+            },
+            {
+              "speaker": "Edd Yerburgh",
+              "title": "Unit testing Vue components: Why test, what to test, and how to test Vue components",
+              "summary": "Why test, what to test, and how to test Vue components",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.7"
+            },
+            {
+              "speaker": "Sebastien Chopin",
+              "title": "How to server-render an application with Vue.js",
+              "summary": "Making an universal web application is not an easy task. We will see how to transform a Vue app to a server-renderer app easily with vue-server-renderer, see the common flaws and what are the solutions to make this process easier.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.8"
+            },
+            {
+              "speaker": "Gerard Sans",
+              "title": "Moving from Angular (v5+) to Vue",
+              "summary": "In this talk we are going to explore how Angular and Vue compare to each other and how you can bridge between the two while looking at how to migrate an Angular Application to Vue in no time.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.9"
+            },
+            {
+              "speaker": "Ives van Hoorne",
+              "title": "Vue Development in CodeSandbox",
+              "summary": "CodeSandbox is an online code editor tailored for web application development. Ives will explain how CodeSandbox got support for Vue and what you can do with it.",
+              "material": "",
+              "code": "",
+              "demo": "https://codesandbox.io/",
+              "twitter": "",
+              "number": "2.10"
+            },
+            {
+              "speaker": "Jen Looper",
+              "title": "Create an Engaging Native Mobile App with Vue and NativeScript",
+              "summary": "You have a beautiful web site built with Vue? Great! Now you need a mobile app to engage your users even further. Or, better yet, you need to offer different, yet complimentary functionality, while retaining shared code between your web site and mobile app. Welcome to the beautiful world of Vue and NativeScript, which, paired together on the web and on mobile, make for a great user experience. In this talk, you’ll learn about my experience building Elocute, a web app for language teachers with a paired mobile app that students use to perfect their spoken language skills. You’ll discover how to build for the web and mobile platforms using NativeScript and Vue, making the most of the best of both platforms - data entry on the web, and speech-to-text on mobile. Let’s learn about how Vue can be used to build for the web and for mobile apps, sharing the love.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.11"
+            },
+            {
+              "speaker": "Sarah Drasner",
+              "title": "Serverless functions and Vue.js: focus on Vue application development by deploying and operating serverless architectures",
+              "summary": "Serverless is the most clickbaity title for an actually interesting thing. Despite the name, Serverless does not mean you’re not using a server, rather, the promise of Serverless is to no longer have to babysit a server. Scaling is done for you, you’re billed only for what you use. In this session, we’ll cover some key use cases for these functions within a Vue.js application: we’ll accept payments with stripe, we’ll gather geolocation data from Google Maps, and more! We’ll make it all work with Vue and Nuxt seamlessly, simplifying how to leverage this paradigm to be a workhorse for your application.",
+              "material": "",
+              "code": "",
+              "demo": "",
+              "twitter": "",
+              "number": "2.12"
+            }
+
+          ]
+        },
+        filters: {
+          lowerCase: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.toLowerCase()
+          }
+        }
+      })
+    </script>
+</body>
+
+</html>
